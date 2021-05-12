@@ -1,0 +1,2 @@
+# Thesaurus
+Simple thesaurus solution
