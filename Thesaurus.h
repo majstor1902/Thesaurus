@@ -2,6 +2,8 @@
 
 #include <string>
 #include <vector>
+#include <set>
+#include <unordered_map>
 
 using namespace std;
 
@@ -33,4 +35,13 @@ public:
      * @return List of all words
      */
     vector<string>* GetAllWords();
+
+    /**
+     * @brief Print all words with their synonyms
+     */
+    void PrintAllEntries();
+
+private:
+    unordered_map<string, set<string>> m_Thesaurus;
+
 };
