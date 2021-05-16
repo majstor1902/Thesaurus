@@ -58,7 +58,7 @@ static void InsertCases(CThesaurus *thesaurus) {
     delete words;
 }
 
-static void PrintEntries(string message, vector<string>* result) {
+static void PrintEntries(const string& message, vector<string>* result) {
     if (result != NULL) {
         cout << message << " : ";
         for (auto i = result->begin(); i != result->end(); ++i)
