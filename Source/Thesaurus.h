@@ -18,7 +18,7 @@ public:
      * 
      * @param pSynonyms List of synonyms
      */
-    void AddSynonyms(vector<string>* pSynonyms);
+    void AddSynonyms(vector<string> *pSynonyms);
 
     /**
      * @brief Gets the synonyms for a given word
@@ -26,7 +26,7 @@ public:
      * @param word Word that is searched
      * @return List of synonyms 
      */
-    vector<string>* GetSynonyms(string word);
+    vector<string> *GetSynonyms(string word);
 
     //Gets all words from the thesaurus
     /**
@@ -34,7 +34,7 @@ public:
      * 
      * @return List of all words
      */
-    vector<string>* GetAllWords();
+    vector<string> *GetAllWords();
 
     /**
      * @brief Print all words with their synonyms
@@ -43,5 +43,4 @@ public:
 
 private:
     unordered_map<string, set<string>> m_Thesaurus;
-
 };

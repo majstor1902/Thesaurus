@@ -2,8 +2,9 @@
 
 #include "Thesaurus.h"
 
-static void InsertCases(CThesaurus *thesaurus) {
-    vector<string>* words = new vector<string>;
+static void InsertCases(CThesaurus *thesaurus)
+{
+    vector<string> *words = new vector<string>;
 
     words->assign({"VW", "golf", "passat", "polo"});
     thesaurus->AddSynonyms(words);
@@ -58,20 +59,25 @@ static void InsertCases(CThesaurus *thesaurus) {
     delete words;
 }
 
-static void PrintEntries(const string& message, vector<string>* result) {
-    if (result != NULL) {
+static void PrintEntries(const string &message, vector<string> *result)
+{
+    if (result != NULL)
+    {
         cout << message << " : ";
         for (auto i = result->begin(); i != result->end(); ++i)
             cout << *i << " ";
         cout << endl;
-    } else {
+    }
+    else
+    {
         cout << message << " : (empty)" << endl;
     }
 }
 
-int main() {
+int main()
+{
     CThesaurus thesaurus;
-    vector<string>* result;
+    vector<string> *result;
 
     InsertCases(&thesaurus);
     result = thesaurus.GetSynonyms("golf");
