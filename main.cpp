@@ -5,69 +5,53 @@
 static void InsertCases(CThesaurus *thesaurus) {
     vector<string>* words = new vector<string>;
 
-    words->insert(words->end(), {"VW", "golf", "passat", "polo"});
+    words->assign({"VW", "golf", "passat", "polo"});
     thesaurus->AddSynonyms(words);
-    words->clear();
 
-    words->insert(words->end(), {"golf", "VW"});
+    words->assign({"golf", "VW"});
     thesaurus->AddSynonyms(words);
-    words->clear();
 
-    words->insert(words->end(), {"passat", "VW"});
+    words->assign({"passat", "VW"});
     thesaurus->AddSynonyms(words);
-    words->clear();
 
-    words->insert(words->end(), {"polo", "VW"});
+    words->assign({"polo", "VW"});
     thesaurus->AddSynonyms(words);
-    words->clear();
 
-    words->insert(words->end(), {"golf", "hatchback", "diesel", "blue"});
+    words->assign({"golf", "hatchback", "diesel", "blue"});
     thesaurus->AddSynonyms(words);
-    words->clear();
 
-    words->insert(words->end(), {"hatchback", "golf"});
+    words->assign({"hatchback", "golf"});
     thesaurus->AddSynonyms(words);
-    words->clear();
 
-    words->insert(words->end(), {"diesel", "golf"});
+    words->assign({"diesel", "golf"});
     thesaurus->AddSynonyms(words);
-    words->clear();
 
-    words->insert(words->end(), {"blue", "golf"});
+    words->assign({"blue", "golf"});
     thesaurus->AddSynonyms(words);
-    words->clear();
 
-    words->insert(words->end(), {"passat", "caravan", "petrol", "green"});
+    words->assign({"passat", "caravan", "petrol", "green"});
     thesaurus->AddSynonyms(words);
-    words->clear();
 
-    words->insert(words->end(), {"caravan", "passat"});
+    words->assign({"caravan", "passat"});
     thesaurus->AddSynonyms(words);
-    words->clear();
 
-    words->insert(words->end(), {"petrol", "passat"});
+    words->assign({"petrol", "passat"});
     thesaurus->AddSynonyms(words);
-    words->clear();
 
-    words->insert(words->end(), {"green", "passat"});
+    words->assign({"green", "passat"});
     thesaurus->AddSynonyms(words);
-    words->clear();
 
-    words->insert(words->end(), {"polo", "hatchback", "diesel", "red"});
+    words->assign({"polo", "hatchback", "diesel", "red"});
     thesaurus->AddSynonyms(words);
-    words->clear();
 
-    words->insert(words->end(), {"hatchback", "polo"});
+    words->assign({"hatchback", "polo"});
     thesaurus->AddSynonyms(words);
-    words->clear();
 
-    words->insert(words->end(), {"diesel", "polo"});
+    words->assign({"diesel", "polo"});
     thesaurus->AddSynonyms(words);
-    words->clear();
 
-    words->insert(words->end(), {"red", "polo"});
+    words->assign({"red", "polo"});
     thesaurus->AddSynonyms(words);
-    words->clear();
 
     thesaurus->PrintAllEntries();
 
