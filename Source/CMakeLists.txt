@@ -5,8 +5,11 @@ add_library(ThesaurusLib)
 target_sources(ThesaurusLib
   PRIVATE
     Thesaurus.cpp
+    ThesaurusDatabase.cpp
+    ThesaurusDatabase.h
   PUBLIC
     Thesaurus.h
+    IDatabase.h
   )
 
 target_include_directories(ThesaurusLib

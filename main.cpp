@@ -1,6 +1,8 @@
 #include <iostream>
 
+#include "IDatabase.h"
 #include "Thesaurus.h"
+#include "ThesaurusDatabase.h"
 
 static void InsertCases(CThesaurus *thesaurus)
 {
@@ -77,24 +79,38 @@ static void PrintEntries(const string &message, vector<string> *result)
 int main()
 {
     CThesaurus thesaurus;
+    CThesaurusDatabase database;
+    thesaurus.AddDatabase(&database);
     vector<string> *result;
+    string word;
 
     InsertCases(&thesaurus);
-    result = thesaurus.GetSynonyms("golf");
-    PrintEntries("golf synonyms", result);
+
+    word = "golf";
+    result = thesaurus.GetSynonyms(word);
+    PrintEntries(word + " synonyms", result);
     delete result;
-    result = thesaurus.GetSynonyms("diesel");
-    PrintEntries("diesel synonyms", result);
+
+    word = "diesel";
+    result = thesaurus.GetSynonyms(word);
+    PrintEntries(word + " synonyms", result);
     delete result;
-    result = thesaurus.GetSynonyms("VW");
-    PrintEntries("VW synonyms", result);
+
+    word = "VW";
+    result = thesaurus.GetSynonyms(word);
+    PrintEntries(word + " synonyms", result);
     delete result;
-    result = thesaurus.GetSynonyms("red");
-    PrintEntries("red synonyms", result);
+
+    word = "red";
+    result = thesaurus.GetSynonyms(word);
+    PrintEntries(word + " synonyms", result);
     delete result;
-    result = thesaurus.GetSynonyms("polo");
-    PrintEntries("polo synonyms", result);
+
+    word = "polo";
+    result = thesaurus.GetSynonyms(word);
+    PrintEntries(word + " synonyms", result);
     delete result;
+
     result = thesaurus.GetAllWords();
     PrintEntries("All words", result);
     delete result;

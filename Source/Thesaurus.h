@@ -5,6 +5,8 @@
 #include <set>
 #include <unordered_map>
 
+#include "IDatabase.h"
+
 using namespace std;
 
 class CThesaurus
@@ -12,6 +14,8 @@ class CThesaurus
 public:
     CThesaurus();
     ~CThesaurus();
+
+    void AddDatabase(IDatabase *database);
 
     /**
      * @brief Adds the given synonyms to the thesaurus
@@ -42,5 +46,5 @@ public:
     void PrintAllEntries();
 
 private:
-    unordered_map<string, set<string>> m_Thesaurus;
+    IDatabase *m_Database;
 };
