@@ -1,6 +1,5 @@
 #include <iostream>
 
-#include "IDatabase.h"
 #include "Thesaurus.h"
 #include "ThesaurusDatabase.h"
 
