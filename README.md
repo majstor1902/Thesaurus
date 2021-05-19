@@ -40,7 +40,9 @@ Built binaries are located in build/bin/ directory.
 This directory contains:
 - ThesaurusApp (small console application)
 - ThesaurusUnitTests (unit tests)
+
 Thesaurus core was built as a static library.
+
 Built libraries are located in build/lib/ directory.
 This directory contains:
 - libThesaurusLib.a
@@ -50,6 +52,7 @@ This directory contains:
 - libgmock_main.a
 
 Scripts:
+
 Inside thesaurus root directory there is also scripts directory.
 Scripts directory contains bash scripts for additional code validation.
 Script for static code analysis called cppcheck.sh, it uses cppcheck.
