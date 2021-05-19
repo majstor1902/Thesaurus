@@ -1,0 +1,13 @@
+name: build_all
+on: push
+
+jobs:
+  run_tests:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build all
+      run: |
+         chmod +x ./scripts/build_all.sh
+         scripts/build_all.sh
+      shell: bash
