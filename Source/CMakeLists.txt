@@ -7,6 +7,7 @@ target_sources(ThesaurusLib
     Thesaurus.cpp
     ThesaurusDatabase.cpp
     ThesaurusDatabase.h
+    ThesaurusException.h
   PUBLIC
     Thesaurus.h
     IDatabase.h
